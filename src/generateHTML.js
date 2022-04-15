@@ -13,7 +13,19 @@ const generateManager = function (manager) {
     `;
 };
 // engineer card
-
+const generateEngineer = function (engineer) {
+  return `
+    <section class="tile is-child box is-link">
+    <div class="title">${engineer.name}</div>
+    <div class="subtitle">Engineer</div>
+    </section>
+    <div class="has-text-centered">
+    <p class="id">ID: ${engineer.id}</p>
+    <p class="email">Email: <a href="mailto:${engineer.email}"></a>${engineer.email}</p>
+    <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+    </div>
+    `;
+};
 // intern card
 
 // push array to page
