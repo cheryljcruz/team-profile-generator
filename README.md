@@ -23,6 +23,16 @@ Watch this video to see how to use the Team Profile Generator through the comman
 
 https://user-images.githubusercontent.com/98433176/163512889-e2a20c71-153a-4080-8d7c-cdd1a1af095e.mp4
 
+</br>
+
+Screenshot of webpage:
+
+![Team profile generator application](https://user-images.githubusercontent.com/98433176/163513371-245630d7-02ad-4be9-9dd5-7b553418226a.png)
+
+</br>
+
+- This is a sample html file generated using the application: ![sample HTML](https://github.com/cheryljcruz/team-profile-generator/blob/main/dist/index.html)
+
 
 ## Test
 
