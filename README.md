@@ -21,6 +21,9 @@ Watch this video to see how to use the Team Profile Generator through the comman
 
 
 
+https://user-images.githubusercontent.com/98433176/163512889-e2a20c71-153a-4080-8d7c-cdd1a1af095e.mp4
+
+
 ## Test
 
 - To test this application successfully, the user must first install Jest. Once Jest is installed, and the user is within the command line(terminal) of the application, simply run 'npm run test' and a test will be performed. To test specific aspects (Employee, Engineer, Intern, Manager), the user may specify within the test. Ex: 'npm run test Employee'
