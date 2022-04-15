@@ -4,12 +4,13 @@ const generateManager = function (manager) {
     <section class="tile is-child box is-link">
     <div class="title">${manager.name}</div>
     <div class="subtitle">Manager</div>
-    </section>
+    
     <div class="has-text-centered">
     <p class="id">ID: ${manager.id}</p>
-    <p class="email">Email: <a href="mailto:${manager.email}"></a>${manager.email}</p>
+    <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
     <p class="office">Office Number: ${manager.officeNumber}</p>
     </div>
+    </section>
     `;
 };
 // engineer card
@@ -18,21 +19,62 @@ const generateEngineer = function (engineer) {
     <section class="tile is-child box is-link">
     <div class="title">${engineer.name}</div>
     <div class="subtitle">Engineer</div>
-    </section>
+    
     <div class="has-text-centered">
     <p class="id">ID: ${engineer.id}</p>
-    <p class="email">Email: <a href="mailto:${engineer.email}"></a>${engineer.email}</p>
+    <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
     <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
     </div>
+    </section>
     `;
 };
 // intern card
-
+const generateIntern = function (intern) {
+  return `
+    <section class="tile is-child box is-link">
+    <div class="title">${intern.name}</div>
+    <div class="subtitle">Intern</div>
+    
+    <div class="has-text-centered">
+    <p class="id">ID: ${intern.id}</p>
+    <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+    <p class="school">School: ${intern.school}</p>
+    </div>
+    </section>
+    `;
+};
 // push array to page
+generateHTML = (data) => {
+  genArray = [];
 
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
+    const role = employee.getRole();
+
+    if (role === "Manager") {
+      const managerTile = generateManager(employee);
+      genArray.push(managerTile);
+    }
+
+    if (role === "Engineer") {
+      const engineerTile = generateEngineer(employee);
+      genArray.push(engineerTile);
+    }
+
+    if (role === "Intern") {
+      const internTile = generateIntern(employee);
+      genArray.push(internTile);
+    }
+  }
+
+  const teamTiles = genArray.join("");
+
+  const generatePage = generateTeam(teamTiles);
+  return generatePage;
+}
 // generated html page
-// add employee cards into function once complete
-const generateTeam = function () {
+
+const generateTeam = function (teamTiles) {
   return `
     <!DOCTYPE html>
   <html lang="en">

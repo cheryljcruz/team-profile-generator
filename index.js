@@ -151,7 +151,7 @@ const promptEngineer = () => {
 };
 
 // intern prompt
-const internPrompt = () => {
+const promptIntern = () => {
   inquirer
     .prompt([
       {
