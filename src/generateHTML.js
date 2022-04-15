@@ -1,5 +1,17 @@
 // manager card
-
+const generateManager = function (manager) {
+  return `
+    <section class="tile is-child box is-link">
+    <div class="title">${manager.name}</div>
+    <div class="subtitle">Manager</div>
+    </section>
+    <div class="has-text-centered">
+    <p class="id">ID: ${manager.id}</p>
+    <p class="email">Email: <a href="mailto:${manager.email}"></a>${manager.email}</p>
+    <p class="office">Office Number: ${manager.officeNumber}</p>
+    </div>
+    `;
+};
 // engineer card
 
 // intern card
@@ -29,9 +41,9 @@ const generateTeam = function () {
  </header>
 
  <main class="tile is-ancestor box">
- <div class="tile is-parent">
- <!--Employee cards-->
-
+ <div class="tile is-parent has-text-centered">
+ <!--Team Tiles-->
+  ${teamTiles}
  </div>
  </main>
   </body>
